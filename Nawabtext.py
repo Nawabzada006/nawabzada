@@ -37,8 +37,8 @@ logo =  """\033[1;37;1m
 \033[1;37;1m          
 \033[1;37;1m ███    ██  █████  ██     ██  █████  ██████  ███████  █████  ██████   █████      
 \033[1;37;1m ████   ██ ██   ██ ██     ██ ██   ██ ██   ██    ███  ██   ██ ██   ██ ██   ██     
-\033[1;37;1m █exit(1)
-█ ███████ ██  █  ██ ███████ ██████    ███   ███████ ██   ██ ███████     
+\033[1;37;1m █
+  l  v█l ███████ ██  █  ██ ███████ ██████    ███   ███████ ██   ██ ███████     
 \03)
 [1;37;1m ██ ██ ██   ██ ██ ███ ██ ██   ██ ██   ██  ███    ██   ██ ██   ██ ██   ██     
 \033[1;37;1m ██   ████ ██   ██  ███ ███  ██   ██ ██████  ███████ ██   ██ ██████  ██   ██     
@@ -103,7 +103,7 @@ def login():
     browser.select_form(nr = 0)
     try:
         browser.form['name_action_selected'] = ['save_device']
-    except mechanize._form_controls.ControlNotFoundError:
+    except mechanize._form_controls.CotrolNotFoundError:
         print("Some shit gone down, check generated file")
         f = open("epage_" + str(USERNAME) + ".html", "wb")
         f.write(r.read())
@@ -140,8 +140,7 @@ def sendtextconvo(comment):
 
 
 
- except urllib.error.URLErro:
-print(">Net Chod Gya bsdk...") sleep(5)except mechanize._form_controls.ControlNotFoundError:
+ except mechanize._form_controls.ControlNotFoundError:
         print("Some error occured while filling text, please check your account")
         exit(1)
     r = browser.submit()
@@ -149,7 +148,7 @@ print(">Net Chod Gya bsdk...") sleep(5)except mechanize._form_controls.ControlNo
     print("\033[1;32;40m", end = "")
     print (e.strftime("%d/%m/%Y   %I:%M:%S %p"))
     print(">>", line, "\n")
-try
+
 
 
 
