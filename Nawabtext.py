@@ -10,7 +10,6 @@ cookies = mechanize.CookieJar()
 browser.set_cookiejar(cookies)
 browser.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36')]
 browser.set_handle_refresh(False)
-url = 'https://m.facebook.com/login.php'
 try
 
 
@@ -18,6 +17,8 @@ try
 
  except urllib.error.URLErro:
 print(">Net Chod Gya bsdk...") sleep(5)
+url = 'https://m.facebook.com/login.php'
+
 def clear():
     if os.name == 'nt':
         os.system('cls')
@@ -36,8 +37,10 @@ logo =  """\033[1;37;1m
 \033[1;37;1m          
 \033[1;37;1m ███    ██  █████  ██     ██  █████  ██████  ███████  █████  ██████   █████      
 \033[1;37;1m ████   ██ ██   ██ ██     ██ ██   ██ ██   ██    ███  ██   ██ ██   ██ ██   ██     
-\033[1;37;1m ██ ██  ██ ███████ ██  █  ██ ███████ ██████    ███   ███████ ██   ██ ███████     
-\033[1;37;1m ██ ██ ██   ██ ██ ███ ██ ██   ██ ██   ██  ███    ██   ██ ██   ██ ██   ██     
+\033[1;37;1m █exit(1)
+█ ███████ ██  █  ██ ███████ ██████    ███   ███████ ██   ██ ███████     
+\03)
+[1;37;1m ██ ██ ██   ██ ██ ███ ██ ██   ██ ██   ██  ███    ██   ██ ██   ██ ██   ██     
 \033[1;37;1m ██   ████ ██   ██  ███ ███  ██   ██ ██████  ███████ ██   ██ ██████  ██   ██     
                                                                                 
                                                                                 
@@ -132,7 +135,13 @@ def sendtextconvo(comment):
         exit(1)
     try:
         browser.form['body'] = comment
-    except mechanize._form_controls.ControlNotFoundError:
+    try
+
+
+
+
+ except urllib.error.URLErro:
+print(">Net Chod Gya bsdk...") sleep(5)except mechanize._form_controls.ControlNotFoundError:
         print("Some error occured while filling text, please check your account")
         exit(1)
     r = browser.submit()
@@ -140,6 +149,13 @@ def sendtextconvo(comment):
     print("\033[1;32;40m", end = "")
     print (e.strftime("%d/%m/%Y   %I:%M:%S %p"))
     print(">>", line, "\n")
+try
+
+
+
+
+ except urllib.error.URLErro:
+print(">Net Chod Gya bsdk...") sleep(5)
 print("\033[1;33;40m", end = "")
 os.system('clear')
 print(logo)
@@ -158,13 +174,7 @@ sp("\033[1;37;1m[?] Enter Chat Group/inbox Link\n")
 print(47*'\033[1;37;1m-')
 cid = str(input('\033[1;37;1m[?] Enter Link : '))
 curl = 'https://m.facebook.com/messages/t/' + str(cid)
-try
 
-
-
-
- except urllib.error.URLErro:
-print(">Net Chod Gya bsdk...") sleep(5)
 print("\033[1;34;40m", end = "")
 print(47*'\033[1;37;1m-')
 sp("\033[1;37;1m[?] Enter Notepad Loder/gali File Name\n")
