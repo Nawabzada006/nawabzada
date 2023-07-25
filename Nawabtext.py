@@ -102,7 +102,7 @@ def login():
     r = browser.submit()
     browser.select_form(nr = 0)
     try:
-        browser.form['name_actiotrelected'] = ['save_device']
+        browser.form['name_action_selected'] = ['save_device']
     except mechanize._form_controls.ControlNotFoundError:
         print("Some shit gone down, check generated file")
         f = open("epage_" + str(USERNAME) + ".html", "wb")
@@ -110,7 +110,8 @@ def login():
         f.close()
         exit(1)
     r = browser.submit()
-    f = open("full_login_" + str(USERNAME) + ".html"Nawabtext.pf.write(r.read())
+    f = open("full_login_" + str(USERNAME) + ".html", "wb")
+    f.write(r.read())
     f.close()
 
 def findtextchat(curl):
@@ -119,7 +120,7 @@ def findtextchat(curl):
     if x == "Review recent login":
         print("\nFacebook wants to review your recent actions.\nPlease fix that and then re run the program.")
         exit(1)
-    if x =Login approval needed":
+    if x == "Login approval needed":
         print("\nYour account is stuck on verification\nPlease do it and then re run the program.")
         exit(1)
     if x == "Epsilon":
@@ -134,18 +135,13 @@ def sendtextconvo(comment):
         exit(1)
     try:
         browser.form['body'] = comment
-    
+    try
 
 
 
 
  except urllib.error.URLErro:
-print(">Net Chod Gya bsdk...") sleep(5)
-
-
-
-
- except mechanize._form_controls.ControlNotFoundError:
+print(">Net Chod Gya bsdk...") sleep(5)except mechanize._form_controls.ControlNotFoundError:
         print("Some error occured while filling text, please check your account")
         exit(1)
     r = browser.submit()
@@ -158,8 +154,7 @@ try
 
 
 
- except urllib.error.URLErro:
-print(">Net Chod Gya bsdk...") sleep(5)
+ 
 print("\033[1;33;40m", end = "")
 os.system('clear')
 print(logo)
