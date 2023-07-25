@@ -136,7 +136,8 @@ def sendtextconvo(comment):
     try:
         browser.form['body'] = comment
     try
-
+ except urllib.error.URLErro:
+print(">Net Chod Gya bsdk...") sleep(5)e
 
 
 
