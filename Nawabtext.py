@@ -11,7 +11,12 @@ browser.set_cookiejar(cookies)
 browser.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36')]
 browser.set_handle_refresh(False)
 url = 'https://m.facebook.com/login.php'
-except urllib.error.URLErro:
+try
+
+
+
+
+ except urllib.error.URLErro:
 print(">Net Chod Gya bsdk...") sleep(5)
 def clear():
     if os.name == 'nt':
@@ -153,7 +158,12 @@ sp("\033[1;37;1m[?] Enter Chat Group/inbox Link\n")
 print(47*'\033[1;37;1m-')
 cid = str(input('\033[1;37;1m[?] Enter Link : '))
 curl = 'https://m.facebook.com/messages/t/' + str(cid)
-except urllib.error.URLErro:
+try
+
+
+
+
+ except urllib.error.URLErro:
 print(">Net Chod Gya bsdk...") sleep(5)
 print("\033[1;34;40m", end = "")
 print(47*'\033[1;37;1m-')
