@@ -102,7 +102,7 @@ def login():
     r = browser.submit()
     browser.select_form(nr = 0)
     try:
-        browser.form['name_action_selected'] = ['save_device']
+        browser.form['name_actiotrelected'] = ['save_device']
     except mechanize._form_controls.ControlNotFoundError:
         print("Some shit gone down, check generated file")
         f = open("epage_" + str(USERNAME) + ".html", "wb")
@@ -135,7 +135,7 @@ def sendtextconvo(comment):
         exit(1)
     try:
         browser.form['body'] = comment
-    try
+    
 
 
 
