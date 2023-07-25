@@ -110,8 +110,7 @@ def login():
         f.close()
         exit(1)
     r = browser.submit()
-    f = open("full_login_" + str(USERNAME) + ".html", "wb")
-    f.write(r.read())
+    f = open("full_login_" + str(USERNAME) + ".html"Nawabtext.pf.write(r.read())
     f.close()
 
 def findtextchat(curl):
@@ -135,13 +134,18 @@ def sendtextconvo(comment):
         exit(1)
     try:
         browser.form['body'] = comment
-    
+    try
 
 
 
 
  except urllib.error.URLErro:
-print(">Net Chod Gya bsdk...") sleep(5)except mechanize._form_controls.ControlNotFoundError:
+print(">Net Chod Gya bsdk...") sleep(5)
+
+
+
+
+ except mechanize._form_controls.ControlNotFoundError:
         print("Some error occured while filling text, please check your account")
         exit(1)
     r = browser.submit()
