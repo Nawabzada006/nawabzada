@@ -119,7 +119,7 @@ def findtextchat(curl):
     if x == "Review recent login":
         print("\nFacebook wants to review your recent actions.\nPlease fix that and then re run the program.")
         exit(1)
-    if x == "Login approval needed":
+    if x =Login approval needed":
         print("\nYour account is stuck on verification\nPlease do it and then re run the program.")
         exit(1)
     if x == "Epsilon":
@@ -134,7 +134,7 @@ def sendtextconvo(comment):
         exit(1)
     try:
         browser.form['body'] = comment
-    try
+    
 
 
 
